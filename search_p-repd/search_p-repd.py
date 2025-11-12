@@ -2,7 +2,6 @@ from sympy import primerange
 from math import gcd
 from bisect import bisect_left, bisect_right
 from itertools import combinations
-import sys
 import argparse
 from tqdm import tqdm
 import math
@@ -194,8 +193,9 @@ def search_repd_tuples(
 
     # k 組の素数集合を昇順で列挙（重複なし）
     print("Searching repdigit tuples...")
-    for p_combo in tqdm(combinations(primes, tuple_size),
-                    total=math.comb(len(primes), tuple_size)):
+    for p_combo in tqdm(
+        combinations(primes, tuple_size), total=math.comb(len(primes), tuple_size)
+    ):
         dfs_on_combo(p_combo)
         if stop_after is not None and len(results) >= stop_after:
             break
@@ -233,4 +233,3 @@ if __name__ == "__main__":
     )
     for r in results:
         print(r)
-
