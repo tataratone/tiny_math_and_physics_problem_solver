@@ -145,7 +145,7 @@ def search_repd_tuples(
                     # 初期化
                     L_new = R_new  # lcm を逐次的に計算する変数
                     a_new = 1  # ゾロ目の値を逐次的に計算する変数
-                    a_list_new = [a_new]  #
+                    a_list_new = [a_new]  # 桁値のリスト
                 else:
                     g = gcd(L, R_new)
                     ratio = R_new // g  # a を更新する倍率
