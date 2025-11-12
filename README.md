@@ -1,0 +1,2 @@
+# tiny_math_and_physics_problem_solver
+小さな数学や物理の問題のソルバー集
